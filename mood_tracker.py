@@ -138,8 +138,9 @@ def menu():
         elif choice == "6":
             print(" GoodBye!! ")
         else:
-            print(" Please choose correct choice 1, or  only!! ")
+            print(" Please choose correct choice 1,2,3,4,5,6 other choice is invalid!!")
     
 menu()
+
 
 
