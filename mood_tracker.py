@@ -27,7 +27,7 @@ def show_history():
         reader = csv.reader(file)
         next(reader)
 
-        print("Mood history saved successfully!!\n")
+        print("your mood history saved successfully!!\n")
 
         for row in reader:
             print(row[0],"-",row[1])
@@ -48,7 +48,7 @@ def mood_analysis():
                 mood_count[mood] += 1
             else:
                 mood_count[mood] = 1
-    print(" Mood Analysis report!! ")
+    print("This is your mood analysis report!! ")
     
     for mood, count in mood_count.items():
         print(mood, ":", count)
@@ -97,7 +97,7 @@ def generate_report():
                 mood_count[mood] = 1
 
     if total_days == 0:
-        print(" No Data available at that moment!!\n")
+        print(" Please enter some data -> select choice 1, no previous data available at that moment!!\n")
         return
     
     max_count = max(mood_count.values())
@@ -123,7 +123,7 @@ def menu():
         print(" choose 5 for Overall Report ")
         print(" choose 6 for Exit!! ")
 
-        choice = input("Enter your choice : ")
+        choice = input("Enter your choice(1,2,3,4,5,6) : ")
     
         if choice == "1":
             add_mood()
@@ -138,9 +138,10 @@ def menu():
         elif choice == "6":
             print(" GoodBye!! ")
         else:
-            print(" Please choose correct choice 1,2,3,4,5,6 other choice is invalid!!")
+            print(" Please choose correct choice 1,2,3,4,5,6 other choices is invalid!!")
     
 menu()
+
 
 
 
